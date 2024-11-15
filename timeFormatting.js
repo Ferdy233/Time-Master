@@ -13,7 +13,7 @@ class Clock {
     }
 
     get12HourTime() {
-        // Convert the time to 12-hour format and add AM/PM indicator
+        // Convert the time to 12-hour format and add AM or PM indicator
         let hours12 = this.hours % 12 || 12; // Handle 12 AM case
         let ampm = this.hours >= 12 ? 'PM' : 'AM';
         return ` ${ampm}`;

@@ -6,9 +6,11 @@ class Clock {
     this.seconds = now.getSeconds();
 }
 }
+
 const clockHours = new Clock();
 const clockMinutes = new Clock();
 const clockSeconds = new Clock();
+
 console.log(clockHours.hours);
 console.log(clockMinutes.minutes); 
 console.log(clockSeconds.seconds);
