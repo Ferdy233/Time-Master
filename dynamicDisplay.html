@@ -1,0 +1,44 @@
+<div id="clockDisplay" style="font-size: 24px; color: #333; text-align: center; padding: 10px; background-color: #f0f0f0; border-radius: 5px; width: 150px; margin: 20px auto;"></div>
+
+<script>
+class Clock {
+    constructor() {
+        // Get the current time when the Clock object is created
+        const now = new Date();
+        this.hours = now.getHours();
+        this.minutes = now.getMinutes();
+        this.seconds = now.getSeconds();
+    }
+
+    getFormattedTime() {
+        // Format the time as HH:MM:SS
+        return `${this.hours}:${this.minutes}:${this.seconds}`;
+    }
+
+    updateTime() {
+        // Update the current time
+        const now = new Date();
+        this.hours = now.getHours();
+        this.minutes = now.getMinutes();
+        this.seconds = now.getSeconds();
+    }
+
+    get12HourTime() {
+        // Convert to 12-hour format and add AM/PM indicator
+        let hours12 = this.hours % 12 || 12;
+        let ampm = this.hours >= 12 ? 'PM' : 'AM';
+        return ` ${ampm}`;
+    }
+}
+
+function updateClockDisplay() {
+    // Create a new Clock object
+    const clock = new Clock();
+
+    // Update the clock display with the formatted time and AM/PM indicator
+    document.getElementById('clockDisplay').innerText = clock.getFormattedTime() + clock.get12HourTime();
+}
+
+// Update the clock display every second
+setInterval(updateClockDisplay, 1000);
+</script>
