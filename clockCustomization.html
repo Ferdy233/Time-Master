@@ -18,10 +18,10 @@ background-color: #fff;
 class Clock {
     constructor() {
         // Initialize the clock by getting the current time
-        this.updateTime();
+        this.updateTheTime();
     }
 
-    updateTime() {
+    updateTheTime() {
         // Get the current date and time
         const now = new Date();
         this.hours = now.getHours();
@@ -29,7 +29,7 @@ class Clock {
         this.seconds = now.getSeconds();
     }
 
-    getFormattedTime(format24 = true) {
+    getTheFormattedTime(format24 = true) {
         // Get the hours, minutes, and seconds
         let hours = this.hours;
         let ampm = '';

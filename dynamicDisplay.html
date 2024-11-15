@@ -17,12 +17,12 @@ class Clock {
         this.seconds = now.getSeconds();
     }
 
-    getFormattedTime() {
+    getTheFormattedTime() {
         // Format the time as HH:MM:SS
         return `${this.hours}:${this.minutes}:${this.seconds}`;
     }
 
-    updateTime() {
+    updateTheTime() {
         // Update the current time
         const now = new Date();
         this.hours = now.getHours();
@@ -30,7 +30,7 @@ class Clock {
         this.seconds = now.getSeconds();
     }
 
-    get12HourTime() {
+    getThe12HourTime() {
         // Convert to 12-hour format and add AM/PM indicator
         let hours12 = this.hours % 12 || 12;
         let ampm = this.hours >= 12 ? 'PM' : 'AM';
@@ -38,12 +38,12 @@ class Clock {
     }
 }
 
-function updateClockDisplay() {
+function updateTheClockDisplay() {
     // Create a new Clock object
     const clock = new Clock();
 
     // Update the clock display with the formatted time and AM/PM indicator
-    document.getElementById('clockDisplay').innerText = clock.getFormattedTime() + clock.get12HourTime();
+    document.getElementById('clockDisplay').innerText = clock.getTheFormattedTime() + clock.getThe12HourTime();
 }
 
 // Update the clock display every second
