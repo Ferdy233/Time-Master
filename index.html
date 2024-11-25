@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Dogbey Ferdinald">
+    <title>Clock</title>
+    <link rel="stylesheet" href="index.css">
+   
+</head>
+<body>
+    <main>
+        <section aria-label="Clock Display">
+            <h2 class="visually-hidden">Current Time</h2>
+            <div id="clockDisplay"></div>
+        </section>
+        <section aria-label="Alarm Settings">
+            <label for="alarmTime">Set Alarm:</label>
+            <input type="time" id="alarmTime">
+            <label for="formatOption">Time Format:</label>
+            <select id="formatOption">
+                <option value="24">24-Hour</option>
+                <option value="12">12-Hour</option>
+            </select>
+        </section>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
